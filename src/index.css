@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 50px;
+  font-weight: bold;
+}
+.wrapper div { text-align: center; }
+.wrapper div div:first-child { margin-bottom: 24px; }
+.code {
+  font-size: 36px;
+  font-family: monospace;
+  background: #efefef;
+  padding: 12px;
+}
