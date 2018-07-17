@@ -1,0 +1,42 @@
+.c_button {
+  padding: 8px 12px;
+  background: #B7D3E7;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.c_button:hover {
+  background: #82B1D7;
+}
+
+/*********
+* COLORS *
+**********/
+
+/* GOOD BUTTON */
+.c_button--good {
+  background: #23DB97;
+}
+.c_button--good:hover {
+  background: #20AC8F;
+}
+/* BAD BUTTON */
+.c_button--bad {
+  background: #EB7A68;
+}
+.c_button--bad:hover {
+  background: #FF4D60;
+}
+
+/**********
+*  SIZES  *
+***********/
+.c_button--large {
+  padding: 12px 18px;
+  font-size: 17px;
+}
+.c_button--small {
+  padding: 6px 8px;
+  font-size: 13px;
+}
