@@ -51,7 +51,15 @@
 /**********
 *   BM6   *
 ***********/
-.c_button.bm6:before {
+.c_button--bm6 {
+  background: #F75893;
+  color: #FFFFFF;
+  border: none;
+}
+.c_button--bm6:hover {
+  background: #e23f7d;
+}
+/* .c_button--bm6:before {
   position: absolute;
   left: -4px;
   top: -4px;
@@ -62,8 +70,8 @@
   border-radius: 5px;
   transition: .2s;
 }
-.c_button.bm6:hover:before {
+.c_button--bm6:hover:before {
   top: -2px;
   left: -2px;
   transition: .2s;
-}
+} */

@@ -12,14 +12,14 @@ import './_common.buttons.source.css';
 class Button extends PureComponent {
   render() {
     const { className, children, size, mood, onClick, bm6 } = this.props;
+    console.log(bm6);
     const classes = classNames('c_button',
       { 'c_button--large' : size === 'large',
         'c_button--small' : size === 'small',
         'c_button--bad'   : mood === 'bad',
-        'bm6'             : bm6,
+        'c_button--bm6'   : bm6,
         className
       });
-
     return (
       <button className={classes} onClick={onClick}>{ children }</button>
     );

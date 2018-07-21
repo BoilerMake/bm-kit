@@ -7,7 +7,7 @@ import Card from '../../components/card';
 import Button from '../../components/button';
 import TextInput from '../../components/text-input';
 
-storiesOf('Components', module)
+storiesOf('Standard Components', module)
   .add('Card', () => (
     <div>
       <Card>
