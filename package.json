@@ -1,6 +1,6 @@
 {
   "name": "bm-kit",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "BoilerMake UI Library",
   "main": "./dist/index.js",
   "scripts": {
