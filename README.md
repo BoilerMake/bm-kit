@@ -1,44 +1,40 @@
-# React NPM Package Boilerplate
+# BM-Kit
 
-Boilerplate code for publishing a React NPM package.
+BM-Kit is BoilerMake's UI library. We use this as the basis for our frontend styling.
 
-* Bundled with [Webpack](https://webpack.js.org/)
-* Develop with Hot Module Replacement [(HMR)](https://webpack.js.org/concepts/hot-module-replacement/)
-* Includes linting with [ESLint](http://eslint.org/)
-* Testing with [Jest](http://facebook.github.io/jest/).
+## Components
 
-## Usage
+### Button
 
-1. Install modules - `yarn`
+```js
+import { Button } from 'bm-kit';
 
-2. Start example and start coding - `yarn start`
-
-3. Run tests - `yarn test`
-
-4. Bundle with - `yarn build`
-
-5. To test if it works correctly in another project you can use npm `npm install -S ../react-npm-component-boilerplate` Note the relative path
-
-E.g. this folder structure
-
-```
-    ./workspace/
-        MyProject
-        react-npm-boilerplate
+<Button
+	className={PropTypes.string}
+	size={PropTypes.oneOf([undefined, 'small', 'large'])}
+	mood={PropTypes.oneOf([undefined, 'good', 'bad'])}
+	onClick={PropTypes.func} >
+	Button Text
+</Button>
 ```
 
-## Extra
+### Text Input
 
-Adjust your `.eslintrc` config file to your own preference.
+```js
+import { TextInput } from 'bm-kit';
 
-## NPM equivalent
+<TextInput
+	label={PropTypes.string}
+	placeholder={PropTypes.oneOf([undefined, 'small', 'large'])}
+/>
+```
 
-yarn | npm
----- | ---
-`yarn` | `npm install`
-`yarn test` | `npm run test`
-`yarn build` | `npm run build`
+### Card
 
-## License
+```js
+import { Card } from 'bm-kit';
 
-MIT © Dinesh Pandiyan
+<Card>
+	<div>You can even put HTML inside!</div>
+</Card>
+```
