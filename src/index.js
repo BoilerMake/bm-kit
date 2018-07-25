@@ -1,9 +1,5 @@
 import Button from './components/button';
-import Card from './components/card';
 import TextInput from './components/text-input';
+import Card from './components/card';
 
-export {
-  Button,
-  Card,
-  TextInput
-};
+export { Button, TextInput, Card };

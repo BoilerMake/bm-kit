@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import './_common.cards.source.css';
+import PropTypes from 'prop-types';
+import './_common.cards.source.scss';
 
 class Card extends PureComponent {
   render() {
@@ -11,6 +12,11 @@ class Card extends PureComponent {
       <div className={classes}>{ children }</div>
     );
   }
+}
+
+Card.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.string,
 }
 
 export default Card;

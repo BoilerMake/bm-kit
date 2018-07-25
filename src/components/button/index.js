@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './_common.buttons.source.css';
+import './_common.buttons.source.scss';
 
 /**
  * @prop className: css classes to be appended
@@ -12,7 +13,6 @@ import './_common.buttons.source.css';
 class Button extends PureComponent {
   render() {
     const { className, children, size, mood, onClick, bm6 } = this.props;
-    console.log(bm6);
     const classes = classNames('c_button',
       { 'c_button--large' : size === 'large',
         'c_button--small' : size === 'small',
@@ -24,6 +24,15 @@ class Button extends PureComponent {
       <button className={classes} onClick={onClick}>{ children }</button>
     );
   }
+}
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.string,
+  size: PropTypes.string,
+  mood: PropTypes.string,
+  onClick: PropTypes.func,
+  bm6: PropTypes.bool,
 }
 
 export default Button;

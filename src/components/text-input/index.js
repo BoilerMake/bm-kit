@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import './_common.text_input.source.css';
+import PropTypes from 'prop-types';
+import './_common.text_input.source.scss';
 
 /**
  * @prop label: Label for input
@@ -51,5 +52,12 @@ class TextInput extends PureComponent {
     );
   }
 }
+
+TextInput.propTypes = {
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  icon: PropTypes.string,
+  bm6: PropTypes.bool,
+};
 
 export default TextInput;
