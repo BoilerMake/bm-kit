@@ -6,7 +6,7 @@ import './_common.cards.source.scss';
 class Card extends PureComponent {
   render() {
     const { className, children } = this.props;
-    const classes = classNames('c_card', { className });
+    const classes = classNames(`c_card ${className}`);
 
     return (
       <div className={classes}>{ children }</div>

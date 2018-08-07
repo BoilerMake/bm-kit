@@ -1,43 +1,45 @@
 .c-text_input {
-  position: relative;
-  background: #FFFFFF;
-  border: 1px solid #919193;
-  padding: 8px 12px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  position: relative;
-}
-.c-text_input--bm6 {
-  position: relative;
-  background: #E3DBED;
-  border: none;
-  padding: 8px 12px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  position: relative;
-}
-.c-text_input--bm6:before {
-  content: ' ';
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  border: 2px solid #F56FA1;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  border-radius: 4px;
-  z-index: 1;
-}
-.c-text_input__input {
-  width: 100%;
-  box-sizing: border-box;
-  border: none;
+  margin-top: 16px;
+  margin-bottom: 16px;
   background: transparent;
-  font-size: 15px;
-  position: relative;
-  z-index: 2;
 }
-.c-text_input__label {
+.c-text_input:hover .c-text_input__input { border-color: #858585; }
+
+.c-text_input__input {
+  border: none;
+  border-bottom: 1px solid #D0D0D0;
+  padding: 8px 0;
+  font-size: 15px;
   width: 100%;
-  font-family: 'Helvetic Neue', sans-serif;
-  margin-bottom: 8px;
+  background: transparent;
+
+  &:focus {
+    border-color: #49BADA !important; // ugh, I hate !important
+  }
+}
+.c-text_input__input--error,
+.c-text_input__input--error:focus {
+  border-color: #F58848 !important; // Save me from my !important misery
+}
+
+.c-text_input__label {
+  display: block;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 15px;
+  color: #5E5E5E;
+}
+.c-text_input__input:focus .c-text_input__label {
+  color: #49BADA;
+}
+.c-text_input__label--optional {
+  font-style: italic;
+  color: #8F8F8F;
+}
+.c-text_input__label--error { color: #F58848; }
+
+.c-text_input__error_text {
+  font-size: 12px;
+  color: #F58848;
+  margin-top: 8px;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
 }

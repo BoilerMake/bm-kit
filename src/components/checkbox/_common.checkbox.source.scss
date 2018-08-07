@@ -1,0 +1,26 @@
+.c_checkbox {
+  display: flex;
+  align-items: center;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.c_checkbox__box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #BFBFBF;
+  margin-right: 8px;
+
+  &:hover {
+    border-color: #04A4CE;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+}
+.c_checkbox__box--checked {
+  background: #01C9FF;
+  width: 22px;
+  height: 22px;
+  border: none;
+}

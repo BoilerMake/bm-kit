@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { _noop } from 'lodash';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './_common.buttons.source.scss';
@@ -6,22 +7,23 @@ import './_common.buttons.source.scss';
 /**
  * @prop className: css classes to be appended
  * @prop children: what goes inside of the buttons
- * @prop size: {small, '': default, large}
- * @prop mood: [good: 'green', bad: 'red', '': default]
  * @prop onClick: function called on clicking the component
  **/
 class Button extends PureComponent {
   render() {
-    const { className, children, size, mood, onClick, bm6 } = this.props;
+    const { className, children, onClick, full, disabled } = this.props;
     const classes = classNames('c_button',
-      { 'c_button--large' : size === 'large',
-        'c_button--small' : size === 'small',
-        'c_button--bad'   : mood === 'bad',
-        'c_button--bm6'   : bm6,
+      { 'c_button--disabled' : disabled,
+        'c_button--full'  : full,
         className
       });
     return (
-      <button className={classes} onClick={onClick}>{ children }</button>
+      <button
+        className={classes}
+        onClick={disabled ? _noop : onClick}
+        {...this.props} >
+        { children }
+      </button>
     );
   }
 }
@@ -29,10 +31,9 @@ class Button extends PureComponent {
 Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.string,
-  size: PropTypes.string,
-  mood: PropTypes.string,
   onClick: PropTypes.func,
-  bm6: PropTypes.bool,
+  full: PropTypes.func,
+  disabled: PropTypes.func,
 }
 
 export default Button;
